@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Application Form</title>
+</head>
+<body>
+    <h2>Bank Application Form</h2>
+    <form action="/submit-application" method="post" enctype="multipart/form-data">
+        <!-- Text Input -->
+        <label for="fullName">Full Name:</label><br>
+        <input type="text" id="fullName" name="fullName" required><br><br>
+
+        <!-- Email Input -->
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <!-- Password Input -->
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <!-- Number Input -->
+        <label for="phoneNumber">Phone Number:</label><br>
+        <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" required><br><br>
+
+        <!-- Date Input -->
+        <label for="dob">Date of Birth:</label><br>
+        <input type="date" id="dob" name="dob" required><br><br>
+
+        <!-- Radio Buttons -->
+        <label>Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label><br><br>
+
+        <!-- Checkbox -->
+        <label for="accountType">Select Account Type:</label><br>
+        <input type="checkbox" id="savings" name="accountType" value="savings" required>
+        <label for="savings">Savings</label><br>
+        <input type="checkbox" id="current" name="accountType" value="current">
+        <label for="current">Current</label><br><br>
+
+        <!-- Select Dropdown -->
+        <label for="branch">Select Branch:</label><br>
+        <select id="branch" name="branch" required>
+            <option value="">--Select Branch--</option>
+            <option value="downtown">Downtown</option>
+            <option value="uptown">Uptown</option>
+            <option value="suburb">Suburb</option>
+        </select><br><br>
+
+        <!-- Textarea -->
+        <label for="address">Address:</label><br>
+        <textarea id="address" name="address" rows="4" cols="50" required></textarea><br><br>
+
+        <!-- File Upload -->
+        <label for="idProof">Upload ID Proof:</label><br>
+        <input type="file" id="idProof" name="idProof" accept=".pdf,.jpg,.jpeg,.png" required><br><br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit Application">
+    </form>
+</body>
+</html>
